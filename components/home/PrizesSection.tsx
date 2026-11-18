@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Award, ChevronRight, Eye, Images } from "lucide-react";
+import { Award, Eye, Images } from "lucide-react";
 import { FEATURED_PRIZES } from "@/data/prizes";
 import { PrizeDetailModal } from "@/components/home/PrizeDetailModal";
 import { Badge } from "@/components/ui/Badge";
@@ -19,16 +19,10 @@ export function PrizesSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 space-y-8 sm:space-y-10">
         <Reveal>
           <SectionHeader
-            eyebrow="Catálogo destacado"
             title="Premios que te van a encantar"
             description="Explora las fotografías, características y detalles de nuestros premios principales."
           />
         </Reveal>
-
-        <div className="flex items-center justify-end gap-1 text-xs font-semibold text-[#6C3AE8] sm:hidden -mb-4">
-          <span>Desliza para ver más</span>
-          <ChevronRight className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />
-        </div>
 
         {/* Mobile horizontal carousel / Tablet & Desktop grid */}
         <Reveal delayMs={80}>

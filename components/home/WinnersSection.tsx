@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Calendar, ChevronRight, MapPin, Trophy } from "lucide-react";
+import { Calendar, MapPin, Trophy } from "lucide-react";
 import { DEMO_WINNERS } from "@/data/winners";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -15,11 +15,6 @@ export function WinnersSection() {
             description="Conoce a quienes ya vivieron la emoción de recibir sus premios."
           />
         </Reveal>
-
-        <div className="flex items-center justify-end gap-1 text-xs font-semibold text-[#6C3AE8] sm:hidden -mb-4">
-          <span>Desliza para ver más</span>
-          <ChevronRight className="h-3.5 w-3.5" strokeWidth={2} aria-hidden="true" />
-        </div>
 
         {/* Mobile horizontal carousel / Tablet & Desktop grid */}
         <Reveal delayMs={80}>

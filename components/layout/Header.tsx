@@ -29,13 +29,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    const themeMeta = document.querySelector('meta[name="theme-color"]');
-    if (themeMeta) {
-      themeMeta.setAttribute("content", isScrolled ? "#FFFFFF" : "#3E1799");
-    }
-  }, [isScrolled]);
-
   const handleNavigate = (id: NavSectionId) => {
     scrollToSection(id);
   };

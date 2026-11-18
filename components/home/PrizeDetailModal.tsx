@@ -10,7 +10,6 @@ import {
   Ticket,
   X,
 } from "lucide-react";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { cn, scrollToSection } from "@/lib/utils";
 import type { Prize } from "@/types";
@@ -110,16 +109,6 @@ export function PrizeDetailModal({ prize, onClose }: PrizeDetailModalProps) {
           >
             <X className="h-4 w-4" aria-hidden="true" />
           </button>
-
-          <div className="absolute top-3 left-3 flex items-center gap-2">
-            <Badge variant="primary">{prize.badge}</Badge>
-            <Badge
-              variant="light"
-              className="bg-[#171126]/55 border-white/20 text-white"
-            >
-              {prize.category}
-            </Badge>
-          </div>
 
           {hasMultipleImages && (
             <>
